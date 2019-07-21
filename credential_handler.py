@@ -1,4 +1,4 @@
-from configparser import ConfigParser
+import configparser as cp
 
 class ConfigurationHandler:
     def __init__(self, file_name='credentials.ini'):
@@ -13,7 +13,7 @@ class ConfigurationHandler:
 
     def read_credentials_from_file(self, file_name):
         try:
-            self.config = ConfigParser()
+            self.config = cp.ConfigParser()
             self.config.read(file_name)
         except:
             raise Exception('trying to read credentials from {} which does not exist.', file_name)
