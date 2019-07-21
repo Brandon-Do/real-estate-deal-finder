@@ -1,11 +1,8 @@
-import credential_handler as cred
+import data_access as da
 
 def main():
     print('starting program')
-    creds = cred.ConfigurationHandler()
-    zwid = creds.get_configuration_value('ZILLOW', 'zwid')
-    api_url = creds.get_configuration_value ('ZILLOW', 'api_url')
-    print(zwid, api_url)
+    data = da.ZillowDataAccess()
 
 if __name__ == '__main__':
     main()

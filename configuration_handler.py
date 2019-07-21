@@ -1,6 +1,8 @@
 import configparser as cp
 
 class ConfigurationHandler:
+    """ This class handles the accessing of configuration values """
+
     def __init__(self, file_name='credentials.ini'):
         self.config = {}
         self.read_credentials_from_file(file_name)
